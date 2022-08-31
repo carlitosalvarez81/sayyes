@@ -1,4 +1,4 @@
-
+import CartIcon from "./CartWidget/CartWidget";
 
 function NavBar() {
   return (
@@ -11,6 +11,7 @@ function NavBar() {
             <li><a href="#!">CONDICIONES</a></li>
             <li><a href="#!">CONTACTO</a></li>
         </ul>
+        <CartIcon count={8}/>
       </header>
     </div>
   );
