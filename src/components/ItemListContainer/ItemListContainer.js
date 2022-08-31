@@ -1,6 +1,7 @@
-export default function ItemListContainer (){
+export default function ItemListContainer ({greeting}){
     return (
-    <div>
-        <h1> este es el contenido </h1>
-    </div>  ) 
-    }
+        <div>
+             <h1>{greeting}</h1>
+        </div>  
+    ) 
+}
