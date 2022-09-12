@@ -1,20 +1,29 @@
-import CartIcon from "./CartWidget/CartWidget";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import CartWidget from './CartWidget';
 
 function NavBar() {
-  return (
-    <div className="NavBar">
-      <header>
-        <ul>
-            <li><a href="#!">HOME</a></li>
-            <li><a href="#!">NOSOTRAS</a></li>
-            <li><a href="#!">VESTIDOS</a></li>
-            <li><a href="#!">CONDICIONES</a></li>
-            <li><a href="#!">CONTACTO</a></li>
-        </ul>
-        <CartIcon count={8}/>
-      </header>
-    </div>
-  );
+    return (
+        <Navbar bg="light" expand="lg">
+            <Container>
+                <Navbar.Brand href="#home">SAYYES</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse className="justify-content-end">
+                    <Nav>
+                        <Nav.Link href="#home">Inicio</Nav.Link>
+                        <Nav.Link href="#link">Quienes Somos</Nav.Link>
+                        <Nav.Link href="#link">Productos</Nav.Link>
+                        <Nav.Link href="#link">Contacto</Nav.Link>
+                        <Nav.Link href="#link">
+                            <CartWidget></CartWidget>
+                        </Nav.Link>
+                        
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
 }
 
 export default NavBar;
