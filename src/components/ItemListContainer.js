@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ItemCount from "./ItemCount";
+import ItemList from "./ItemList";
 
 function ItemListContainer() {
 
@@ -12,6 +13,7 @@ function ItemListContainer() {
     return (
         <div className="mt-5">
             <ItemCount stock="5" initial={item} onAdd={() => onAdd()}></ItemCount>
+            <ItemList></ItemList>
         </div>
     );
 }

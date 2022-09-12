@@ -7,6 +7,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 
 function ItemCount({ stock, initial, onAdd }) {
+    
     return (
         <div>
             <Container>
