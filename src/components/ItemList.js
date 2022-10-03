@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { data } from "./data.js";
 import { useParams } from "react-router-dom";
+import { getHeapSnapshot } from "v8";
 
 export default function ItemList() {
   const [vestidos, setVestidos] = useState([]);
@@ -43,7 +44,11 @@ export default function ItemList() {
   };
 
   useEffect(() => {
-    getItem();
+   const db = getFireStore();
+
+   const ItemList = List (db, "items")
+   getDocs (ItemList).then((snapshot) => [setProducts (snapshot.docs.maps ((doc) => ({id: doc.id, doc.data ()})));
+  });
   }, []);
 
   useEffect(() => {
